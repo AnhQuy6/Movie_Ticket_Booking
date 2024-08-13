@@ -10,7 +10,11 @@ public partial class TAIKHOAN
     public int MaTK { get; set; }
 
     public string TenTK { get; set; }
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
     public string MatKhau { get; set; }
 
     public string DiaChi { get; set; }

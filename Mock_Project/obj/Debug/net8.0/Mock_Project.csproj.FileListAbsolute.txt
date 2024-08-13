@@ -136,5 +136,8 @@ E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\obj\Debug\net8.0\refint\Moc
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\obj\Debug\net8.0\Mock_Project.pdb
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\obj\Debug\net8.0\Mock_Project.genruntimeconfig.cache
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\obj\Debug\net8.0\ref\Mock_Project.dll
+<<<<<<< HEAD
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\bin\Debug\net8.0\BCrypt.Net-Next.dll
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+=======
+>>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642

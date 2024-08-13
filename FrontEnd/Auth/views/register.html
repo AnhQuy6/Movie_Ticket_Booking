@@ -1,0 +1,85 @@
+<!-- Form đăng ký -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Auth/css/style.css">
+    <title>Đăng ký</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="" id="registerForm">
+            <fieldset>
+                <legend>Đăng ký</legend>
+                <label for="ten_tk">Tên tài khoản:</label>
+                <input type="text" id="ten_tk" name="ten_tk" required><br>
+                
+                <label for="mat_khau">Mật khẩu:</label>
+                <input type="password" id="mat_khau" name="mat_khau" required><br>
+                
+                <label for="xac_thuc_mat_khau">Xác thực mật khẩu:</label>
+                <input type="password" id="xac_thuc_mat_khau" name="xac_thuc_mat_khau" required><br>
+                
+                <label for="dia_chi">Địa chỉ:</label>
+                <input type="text" id="dia_chi" name="dia_chi"><br>
+                
+                <label for="ngay_sinh">Ngày sinh:</label>
+                <input type="date" id="ngay_sinh" name="ngay_sinh"><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required ><br>
+                
+                <label for="sdt">Số điện thoại:</label>
+                <input type="text" id="sdt" name="sdt" ><br>
+
+                <label for="ten_nd">Tên người dùng</label>
+                <input type="text" id="ten_nd" name="ten_nd" required><br>
+                
+                <input type="submit" value="Đăng ký">
+            </fieldset>
+        </form>
+        <p>Bạn đã có tài khoản?</p>
+        <a href="./login.html">Đăng nhập</a>
+    </div>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            
+            // Lấy dữ liệu từ form
+            var formData = {
+                tenTK: document.getElementById("ten_tk").value,
+                matKhau: document.getElementById("mat_khau").value,
+                diaChi: document.getElementById("dia_chi").value,
+                ngaySinh: document.getElementById("ngay_sinh").value,
+                email: document.getElementById("email").value,
+                sdt: document.getElementById("sdt").value,
+                tenNguoiDung: document.getElementById("ten_nd").value
+            };
+    
+            // Gửi yêu cầu POST đến API
+            fetch('https://localhost:7074/api/TaiKhoan/Register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();  // Nếu response thành công, trả về dữ liệu JSON
+                } else {
+                    throw new Error('Đăng ký thất bại.');  // Nếu response không thành công, ném lỗi
+                }
+            })
+            .then(data => {
+                alert("Bạn đã đăng ký thành công!");  // Hiển thị thông báo đăng ký thành công
+                window.location.href = "./login.html";  // Chuyển hướng đến trang đăng nhập
+            })
+            .catch((error) => {
+                alert("Đăng ký thất bại: " + error.message);  // Hiển thị thông báo lỗi
+            });
+        });
+    </script>
+</body>
+</html>
