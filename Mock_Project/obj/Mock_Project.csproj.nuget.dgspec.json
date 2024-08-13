@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj": {}
+    "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj": {}
   },
   "projects": {
-    "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj": {
+    "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj",
+        "projectUniqueName": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
         "projectName": "Mock_Project",
-        "projectPath": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\obj\\",
+        "projectPath": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+        "packagesPath": "C:\\Users\\DUC DUNG\\.nuget\\packages\\",
+        "outputPath": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DUC DUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -74,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
