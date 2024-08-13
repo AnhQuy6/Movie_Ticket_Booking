@@ -1,14 +1,11 @@
 
-<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Mock_Project.Models;
 using System.Text;
-=======
 using Microsoft.EntityFrameworkCore;
 using Mock_Project.Models;
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
 
 namespace Mock_Project
 {
@@ -17,7 +14,7 @@ namespace Mock_Project
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-<<<<<<< HEAD
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -34,8 +31,7 @@ namespace Mock_Project
             });
 
             builder.Services.AddAuthorization();
-=======
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             // Add services to the container.
 
@@ -65,10 +61,9 @@ namespace Mock_Project
             app.UseHttpsRedirection();
 
             app.UseCors("AllowAll");
-<<<<<<< HEAD
+
             app.UseAuthentication();
-=======
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
             app.UseAuthorization();
 
 

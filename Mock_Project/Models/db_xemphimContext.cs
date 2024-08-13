@@ -29,20 +29,16 @@ public partial class db_xemphimContext : DbContext
 
     public virtual DbSet<VEPHIM> VEPHIM { get; set; }
 
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<PHIM>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaPhim).HasName("PK__PHIM__4AC03DE3C61F2191");
-=======
+
             entity.HasKey(e => e.MaPhim).HasName("PK__PHIM__4AC03DE3A6E2E1A5");
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             entity.Property(e => e.Anh)
                 .HasMaxLength(30)
@@ -64,11 +60,11 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<PHONG>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaPhong).HasName("PK__PHONG__20BD5E5BB55A4C63");
-=======
+
             entity.HasKey(e => e.MaPhong).HasName("PK__PHONG__20BD5E5B9CF3BB84");
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             entity.Property(e => e.TenPhong)
                 .IsRequired()
@@ -83,11 +79,11 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<RAP>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaRap).HasName("PK__RAP__3961207FD7B9B51A");
-=======
+
             entity.HasKey(e => e.MaRap).HasName("PK__RAP__3961207FC3A9C024");
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             entity.Property(e => e.Anh)
                 .HasMaxLength(255)
@@ -107,11 +103,11 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<SUATCHIEU>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaSuatChieu).HasName("PK__SUATCHIE__CF5984D297A065BC");
-=======
+
             entity.HasKey(e => e.MaSuatChieu).HasName("PK__SUATCHIE__CF5984D268EF1453");
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             entity.Property(e => e.NgayChieu).HasColumnType("datetime");
 
@@ -128,7 +124,7 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<TAIKHOAN>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__272500705F801E14");
 
             entity.Property(e => e.DiaChi)
@@ -151,7 +147,7 @@ public partial class db_xemphimContext : DbContext
             entity.Property(e => e.TenTK)
                 .IsRequired()
                 .HasMaxLength(100)
-=======
+
             entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__27250070872CB56E");
 
             entity.Property(e => e.DiaChi)
@@ -174,17 +170,16 @@ public partial class db_xemphimContext : DbContext
             entity.Property(e => e.TenTK)
                 .IsRequired()
                 .HasMaxLength(30)
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
                 .IsUnicode(false);
         });
 
         modelBuilder.Entity<VEPHIM>(entity =>
         {
-<<<<<<< HEAD
+
             entity.HasKey(e => e.MaVe).HasName("PK__VEPHIM__2725100F94EB4B4B");
-=======
+
             entity.HasKey(e => e.MaVe).HasName("PK__VEPHIM__2725100FD97866ED");
->>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+
 
             entity.Property(e => e.PTTT)
                 .HasMaxLength(255)
