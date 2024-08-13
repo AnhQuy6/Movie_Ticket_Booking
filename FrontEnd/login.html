@@ -96,36 +96,38 @@
     </div>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            var tenTK = document.getElementById("ten_tk").value;
-            var matKhau = document.getElementById("mat_khau").value;
-    
-            fetch('https://localhost:7074/api/TaiKhoan/Login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    TenTK   : tenTK,
-                    MatKhau: matKhau
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Đăng nhập thất bại.');
-                }
-            })
-            .then(data => {
-                localStorage.setItem('token', data.token); 
-                window.location.href = "trangchu.html";
-            })
-            .catch((error) => {
-                alert(error.message);
-            });
-        });
+    event.preventDefault();
+
+    var tenTK = document.getElementById("ten_tk").value;
+    var matKhau = document.getElementById("mat_khau").value;
+
+    fetch('https://localhost:7074/api/TaiKhoan/Login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            TenTK: tenTK,
+            MatKhau: matKhau
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Đăng nhập thất bại.');
+        }
+    })
+    .then(data => {
+        localStorage.setItem('token', data.token); 
+        localStorage.setItem('username', tenTK); // Lưu tên người dùng vào localStorage
+        window.location.href = "trangchu.html"; // Chuyển về trang chủ sau khi đăng nhập thành công
+    })
+    .catch((error) => {
+        alert(error.message);
+    });
+});
+
     </script>
     
 </body>

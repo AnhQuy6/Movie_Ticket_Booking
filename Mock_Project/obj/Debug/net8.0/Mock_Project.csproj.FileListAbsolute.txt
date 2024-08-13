@@ -141,3 +141,4 @@ E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\bin\Debug\net8.0\BCrypt.Net
 E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 =======
 >>>>>>> 7ad36da62a560858fa321f07c8c98f0a5ec07642
+E:\THỰC TẬP\2024-08-06\Mock_Project\Mock_Project\obj\Debug\net8.0\Mock_Project.sourcelink.json

@@ -146,7 +146,7 @@ public partial class db_xemphimContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.TenTK)
                 .IsRequired()
-                .HasMaxLength(100)
+                .HasMaxLength(100);
 
             entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__27250070872CB56E");
 
