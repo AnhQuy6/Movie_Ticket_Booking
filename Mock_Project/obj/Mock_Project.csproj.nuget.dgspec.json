@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj": {}
+    "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj": {}
   },
   "projects": {
-    "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj": {
+    "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj",
+        "projectUniqueName": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
         "projectName": "Mock_Project",
-        "projectPath": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\Mock_Project.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\THỰC TẬP\\2024-08-06\\Mock_Project\\Mock_Project\\obj\\",
+        "projectPath": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -49,6 +54,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -74,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

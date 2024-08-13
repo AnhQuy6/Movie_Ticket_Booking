@@ -15,7 +15,7 @@ public partial class PHIM
 
     public string ThoiLuong { get; set; }
 
-    public TimeOnly? KhoiChieu { get; set; }
+    public TimeOnly KhoiChieu { get; set; }
 
     public string Anh { get; set; }
 

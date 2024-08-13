@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="/Admin/Dashboard/css/style.css">
   </head>
 
-<body>
+  <body>
     <div id="header"></div>
     <div class="container mt-4">
         <h1 class="text-center mb-4">Sửa rạp phim</h1>
-        <form action="" method="post">
+        <form id="editForm" data-id="" action="" method="post">
             <div class="form-group">
                 <label for="tenRap">Tên rạp:</label>
                 <input type="text" id="tenRap" name="tenRap" value=""
@@ -45,9 +45,9 @@
         <a href="list.html" class="btn btn-secondary btn-block mt-3">Quay lại</a>
     </div>
     <div id="footer"></div>
+    <script src="/Admin/Services/TheaterManagement/js/script.js"></script>
     <script src="/Admin/Components/js/script.js"></script>
     <!-- Bootstrap JS và các file script khác -->
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
