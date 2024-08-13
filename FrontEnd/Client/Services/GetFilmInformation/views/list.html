@@ -12,10 +12,77 @@
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/Admin/Dashboard/css/style.css">
+    <style>
+        body {  
+      font-family: Arial, sans-serif;  
+      background-color: #f9f9f9;  
+      }  
+
+      header {  
+      background-color: #f0e68c;  
+      padding: 20px;  
+      text-align: center;  
+      }  
+
+      .movie-list {  
+      display: flex;  
+      flex-wrap: wrap;  
+      justify-content: center;  
+      margin: 20px;  
+      }  
+
+      .movie-item {  
+      border: 1px solid #ccc;  
+      border-radius: 5px;  
+      margin: 10px;  
+      padding: 10px;  
+      width: 200px;  
+      text-align: center;  
+      background-color: #fff;  
+      }  
+
+      .movie-item img {  
+      width: 100%;  
+      height: auto;  
+      }  
+
+      button {  
+      margin: 5px;  
+      }  
+    </style>
   </head>
 <body>
   <!-- Header -->
-   <h1>Lấy thông tin phim</h1>
+  <main>  
+    <h2>Danh Sách Phim</h2>  
+    <div id="movie-list" class="movie-list"></div>  
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {  
+    fetch('https://localhost:7074/api/Phim')  
+        .then(response => response.json())  
+        .then(data => {  
+            const movieList = document.getElementById('movie-list');  
+            data.forEach(movie => {  
+                const movieItem = document.createElement('div');  
+                movieItem.className = 'movie-item';  
+                movieItem.innerHTML = `  
+                    <img src="${movie.anh}" alt="${movie.tenPhim}">  
+                    <h3>${movie.tenPhim}</h3>  
+                    <p>Thời lượng: ${movie.thoiLuong}</p>  
+                    <p>Thể loại: ${movie.theLoai}</p>  
+                    <button onclick="viewDetails(${movie.maPhim})">Xem Chi Tiết</button>  
+                `;  
+                movieList.appendChild(movieItem);  
+            });  
+        })  
+        .catch(error => console.error('Error fetching movies:', error));  
+});  
+
+function viewDetails(movieId) {  
+    window.location.href = `details.html?id=${movieId}`;  
+}
+</script>
   <!-- Footer -->
 </body>
 </html>

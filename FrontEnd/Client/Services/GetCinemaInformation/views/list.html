@@ -1,21 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/Admin/Dashboard/css/style.css">
-  </head>
-<body>
-  <!-- Header -->
-   <h1>Lấy thông tin rạp</h1>
-  <!-- Footer -->
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Thông Tin Rạp</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 20px;  
+        }  
+        .rap-list {  
+            display: flex;  
+            flex-wrap: wrap;  
+            gap: 10px;  
+        }  
+        .rap {  
+            border: 1px solid #ccc;  
+            padding: 10px;  
+            border-radius: 5px;  
+            text-align: center;  
+            width: 150px;  
+        }  
+        .rap img {  
+            width: 100%;  
+            height: auto;  
+        }  
+        .thong-tin-rap {  
+            margin-top: 20px;  
+        }  
+        .thong-tin-rap img {  
+            width: 85%;  
+            height: 400px;  
+            margin-left: 100px;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<h1>Danh Sách Rạp</h1>  
+<div class="rap-list" id="rapList"></div>  
+
+<div class="thong-tin-rap" id="rapInfo">  
+    <h2>Thông Tin Rạp</h2>  
+    <div id="rapDetails"></div>
+    <!-- <img id="rapImage" alt="Rạp">  
+    <p id="rapName">Rạp:</p>  
+    <p id="rapDiaChi">Địa chỉ:</p>  
+    <p id="rapSDT">Số điện thoại:</p>   -->
+</div>  
+
+<script>  
+    async function loadRaps() {  
+        const response = await fetch('https://localhost:7074/api/RAP'); 
+        const raps = await response.json();  
+        
+        const rapListDiv = document.getElementById('rapList');  
+        rapListDiv.innerHTML = ''; 
+
+        raps.forEach(rap => {  
+            const rapDiv = document.createElement('div');  
+            rapDiv.className = 'rap';  
+            rapDiv.innerHTML = `  
+                <a href="#" onclick="loadRapDetails(${rap.maRap})">  
+                    <img src="${rap.anh}" alt="Rạp ${rap.tenRap}">  
+                    <p>${rap.tenRap}</p>  
+                </a>  
+            `;  
+            rapListDiv.appendChild(rapDiv);  
+        });  
+    }  
+
+    async function loadRapDetails(id) {  
+        const response = await fetch(`https://localhost:7074/api/RAP/${id}`); 
+        const rap = await response.json();  
+
+        const rapDetailsDiv = document.getElementById('rapDetails');
+        rapDetailsDiv.innerHTML = `  
+            <img src="${rap.anh}" alt="Rạp">  
+            <p>Rạp: ${rap.tenRap}</p>  
+            <p>Địa chỉ: ${rap.diaChi}</p>  
+            <p>Số điện thoại: ${rap.sdt}</p>  
+        `;
+    } 
+
+    window.onload = loadRaps; 
+</script>

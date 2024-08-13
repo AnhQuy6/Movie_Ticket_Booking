@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Chi Tiết Phim</title>  
+    <style>
+        .movie-details {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-details img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    .btn-back {
+        margin-top: 20px;
+    }
+    </style>
+</head>  
+<body style="background-color: rgb(253, 252, 240);">  
+    <div class="container" style="max-width: 400px;"> 
+        <main id="movie-details" class="movie-details"></main>  
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {  
+    const urlParams = new URLSearchParams(window.location.search);  
+    const movieId = urlParams.get('id');  
+
+    fetch(`https://localhost:7074/api/Phim/${movieId}`) 
+        .then(response => response.json())  
+        .then(movie => {  
+            const movieDetails = document.getElementById('movie-details');  
+            movieDetails.innerHTML = `  
+                <img src="${movie.anh}" alt="${movie.tenPhim}">  
+                <h2>${movie.tenPhim}</h2>  
+                <p>Thời lượng: ${movie.thoiLuong}</p>  
+                <p>Thể loại: ${movie.theLoai}</p>  
+                <p>Mô tả: ${movie.moTa}</p>  
+                <a href="javascript:history.back()" class="btn btn-primary btn-back">Quay lại</a>
+                <a class="btn btn-primary btn-back" id="datve" style="margin-left: 170px; background-color: red;">Đặt vé</a>
+            `;  
+        })  
+        .catch(error => console.error('Error fetching movie details:', error));  
+});
+    </script>  
+</body>  
+</html>
