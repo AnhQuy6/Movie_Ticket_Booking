@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tài Khoản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .edit-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .add-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .add-button:hover {
+            background-color: #218838;
+        }
+
+        form {
+            display: none;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        button.cancel-button {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Quản Lý Tài Khoản</h1>
+
+    <button class="add-button" onclick="toggleForm()">Thêm Tài Khoản Mới</button>
+
+    <form id="taiKhoanForm">
+        <label for="tenTk">Tên Tài Khoản:</label>
+        <input type="text" id="tenTk" name="tenTk" required>
+
+        <label for="tenNguoiDung">Tên Người Dùng:</label>
+        <input type="text" id="tenNguoiDung" name="tenNguoiDung" required>
+
+        <label for="ngaySinh">Ngày Sinh:</label>
+        <input type="date" id="ngaySinh" name="ngaySinh" required>
+
+        <label for="diaChi">Địa Chỉ:</label>
+        <input type="text" id="diaChi" name="diaChi">
+
+        <label for="sdt">Số Điện Thoại:</label>
+        <input type="text" id="sdt" name="sdt">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Lưu Tài Khoản</button>
+        <button type="button" class="cancel-button" onclick="toggleForm()">Hủy</button>
+    </form>
+
+    <table id="taiKhoanTable">
+        <thead>
+            <tr>
+                <th>Tên Tài Khoản</th>
+                <th>Tên Người Dùng</th>
+                <th>Email</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+  document.getElementById("taiKhoanForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const taiKhoanData = {};
+    formData.forEach((value, key) => taiKhoanData[key] = value);
+
+    fetch("https://localhost:7074/api/BaoTriTaiKhoan", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(taiKhoanData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Tài khoản đã được lưu thành công!");
+        loadTaiKhoans(); 
+        toggleForm(); 
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Đã xảy ra lỗi trong quá trình lưu tài khoản.");
+    });
+});
+
+function loadTaiKhoans() {
+    fetch("https://localhost:7074/api/BaoTriTaiKhoan")
+    .then(response => response.json())
+    .then(data => {
+        const taiKhoanTableBody = document.querySelector("#taiKhoanTable tbody");
+        taiKhoanTableBody.innerHTML = "";
+
+        data.forEach(taiKhoan => {
+            console.log(taiKhoan);  
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${taiKhoan.tenTK}</td>
+                <td>${taiKhoan.tenNguoiDung}</td>
+                <td>${taiKhoan.email}</td>
+                <td class="action-buttons">
+                    <button class="edit-button" onclick="editTaiKhoan(${taiKhoan.maTK})">Edit</button>
+                    <button class="delete-button" onclick="deleteTaiKhoan(${taiKhoan.maTK})">Delete</button>
+                </td>
+            `;
+
+            taiKhoanTableBody.appendChild(row);
+        });
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+
+function deleteTaiKhoan(id) {
+    if (confirm("Bạn có chắc muốn xóa tài khoản này?")) {
+        fetch(`https://localhost:7074/api/BaoTriTaiKhoan/${id}`, {
+            method: "DELETE"
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Tài khoản đã được xóa thành công!");
+                loadTaiKhoans(); 
+            } else {
+                alert("Đã xảy ra lỗi trong quá trình xóa tài khoản.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+}
+
+function editTaiKhoan(id) {
+    fetch(`https://localhost:7074/api/BaoTriTaiKhoan/${id}`)
+    .then(response => response.json())
+    .then(taiKhoan => {
+      console.log(taiKhoan);
+        document.getElementById("tenTk").value = taiKhoan.tenTK;
+        document.getElementById("tenNguoiDung").value = taiKhoan.tenNguoiDung;
+        document.getElementById("ngaySinh").value = taiKhoan.ngaySinh;
+        document.getElementById("diaChi").value = taiKhoan.diaChi;
+        document.getElementById("sdt").value = taiKhoan.sdt;
+        document.getElementById("email").value = taiKhoan.email;
+
+        toggleForm(); 
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+
+function toggleForm() {
+    const form = document.getElementById("taiKhoanForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+}
+
+window.onload = loadTaiKhoans;
+
+</script>
+
+</body>
+</html>
