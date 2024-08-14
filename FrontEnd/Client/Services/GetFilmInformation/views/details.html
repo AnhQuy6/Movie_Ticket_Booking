@@ -49,9 +49,14 @@
                 <a href="javascript:history.back()" class="btn btn-primary btn-back">Quay lại</a>
                 <a class="btn btn-primary btn-back" id="datve" style="margin-left: 170px; background-color: red;">Đặt vé</a>
             `;  
+
+            document.getElementById('datve').addEventListener('click', () => {
+                window.location.href = `../../BookTicket/views/Booking.html?movieId=${movieId}`;
+            });
         })  
         .catch(error => console.error('Error fetching movie details:', error));  
 });
+
     </script>  
 </body>  
 </html>
