@@ -36,35 +36,74 @@ namespace Mock_Project.Controllers
         }
         // PUT:
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPhim(int id, PHIM phim)
+        public async Task<ActionResult<PHIM>> PutPhim(int id, [FromForm] IFormFile anh, [FromForm] string tenPhim, [FromForm] string theLoai, [FromForm] string thoiLuong, [FromForm] TimeOnly khoiChieu, [FromForm] string moTa)
         {
-            if (id != phim.MaPhim)
-            {
-                return BadRequest(new { message = "ID không khớp với MaPhim" });
-            }
-            _context.Entry(phim).State = EntityState.Modified;
+            var phim = await _context.PHIM.FindAsync(id);
 
-            try
+            if (phim == null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
+            phim.TenPhim = tenPhim;
+            phim.TheLoai = theLoai;
+            phim.ThoiLuong = thoiLuong;
+            phim.KhoiChieu = khoiChieu;
+            phim.MoTa = moTa;
+
+            if (anh != null && anh.Length > 0)
             {
-                if (!PhimExists(id))
+                var fileName = Path.GetFileNameWithoutExtension(anh.FileName);
+                var extension = Path.GetExtension(anh.FileName);
+                var newFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", newFileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
-                    return NotFound(new { message = "Không tìm thấy phim với ID này" });
+                    await anh.CopyToAsync(stream);
                 }
-                else
-                {
-                    throw;
-                }
+                phim.Anh = "/images/" + newFileName;
             }
-            return Ok(phim); 
+
+            _context.Entry(phim).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
         // POST
+        //[HttpPost]
+        //public async Task<ActionResult<PHIM>> PostPhim(PHIM phim)
+        //{
+        //    _context.PHIM.Add(phim);
+        //    await _context.SaveChangesAsync();
+
+        //    return CreatedAtAction("GetPhim", new { id = phim.MaPhim }, phim);
+        //}
+        //UPLOAD FILE
         [HttpPost]
-        public async Task<ActionResult<PHIM>> PostPhim(PHIM phim)
+        public async Task<ActionResult<PHIM>> PostFile([FromForm] PHIM_IMAGE phimImage)
         {
+            var phim = new PHIM
+            {
+                TenPhim = phimImage.TenPhim,
+                TheLoai = phimImage.TheLoai,
+                ThoiLuong = phimImage.ThoiLuong,
+                KhoiChieu = phimImage.KhoiChieu,
+                MoTa = phimImage.MoTa,
+            };
+
+            if (phimImage.Anh != null && phimImage.Anh.Length > 0)
+            {
+                var fileName = Path.GetFileNameWithoutExtension(phimImage.Anh.FileName);
+                var extension = Path.GetExtension(phimImage.Anh.FileName);
+                var newFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await phimImage.Anh.CopyToAsync(stream);
+                }
+                phim.Anh = "/images/" + newFileName;
+            }
             _context.PHIM.Add(phim);
             await _context.SaveChangesAsync();
 

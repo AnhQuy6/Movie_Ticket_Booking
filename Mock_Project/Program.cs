@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Mock_Project.Models;
 
 namespace Mock_Project
@@ -38,6 +39,14 @@ namespace Mock_Project
             app.UseHttpsRedirection();
 
             app.UseCors("AllowAll");
+            app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images")),
+                RequestPath = new PathString("/images")
+            });
             app.UseAuthorization();
 
 

@@ -16,7 +16,9 @@ async function loadRapData() {
         <td>${rap.maRap}</td>
         <td>${rap.tenRap}</td>
         <td>${rap.diaChi}</td>
-        <td><img src="${rap.anh}" alt="Ảnh rạp phim" class="img-thumbnail" style="max-width: 100px;"></td>
+        <td>
+          <img src="https://localhost:7074${rap.anh}" alt="Ảnh rạp phim" class="img-thumbnail" style="max-width: 100px;">
+        </td>
         <td>${rap.sdt}</td>
         <td>
           <a href="edit.html?id=${rap.maRap}" class="btn btn-warning btn-sm">Sửa</a>
@@ -51,8 +53,7 @@ async function deleteRap(id) {
   }
 }
 
-//Sửa rạp phim
-//Load old data
+// Load old data
 async function loadData(id) {
   try {
     const response = await fetch(`${API}/${id}`);
@@ -60,8 +61,15 @@ async function loadData(id) {
       const data = await response.json();
       document.getElementById("tenRap").value = data.tenRap;
       document.getElementById("diaChi").value = data.diaChi;
-      document.getElementById("anh").value = data.anh;
       document.getElementById("soDienThoai").value = data.sdt;
+      // Hiển thị ảnh hiện tại
+      const img = document.getElementById("anh");
+      if (data.anh) {
+        img.src = `https://localhost:7074/images/${data.anh}`;
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
     } else {
       alert("Không tìm thấy dữ liệu.");
     }
@@ -70,51 +78,37 @@ async function loadData(id) {
     alert("Có lỗi xảy ra khi tải dữ liệu.");
   }
 }
+
 // Xử lý khi trang được tải
 document.addEventListener("DOMContentLoaded", () => {
   // Nạp dữ liệu rạp phim vào bảng
-  loadRapData();
-  
-  // Xử lý form sửa thông tin
-  const form = document.getElementById("editForm");
   const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id"); 
+  const id = urlParams.get("id");
 
   if (id) {
-    form.setAttribute("data-id", id);
-    loadData(id); 
+    loadData(id);
   }
+
+  // Xử lý form sửa thông tin
+  const form = document.getElementById("editForm");
+
   form.addEventListener("submit", async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const id = form.getAttribute("data-id");
-    console.log(id);
-    // Thu thập dữ liệu từ form
-    const tenRap = document.getElementById("tenRap").value;
-    const diaChi = document.getElementById("diaChi").value;
-    const anh = document.getElementById("anh").value;
-    const soDienThoai = document.getElementById("soDienThoai").value;
-
-    const updatedData = {
-      maRap: id,
-      tenRap: tenRap,
-      diaChi: diaChi,
-      anh: anh,
-      soDienThoai: soDienThoai,
-    };
+    const id = new URLSearchParams(window.location.search).get("id");
+    const formData = new FormData(form);
+    formData.append('maRap', id);
 
     try {
       // Gửi yêu cầu PUT đến API
       const response = await fetch(`${API}/${id}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedData),
+        body: formData,
       });
+
       if (response.ok) {
         alert("Cập nhật thành công!");
-        window.location.href = "list.html"; 
+        window.location.href = "list.html";
       } else {
         alert("Có lỗi xảy ra khi cập nhật.");
         console.error("Update failed:", response.status);

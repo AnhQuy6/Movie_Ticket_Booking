@@ -42,41 +42,86 @@ namespace Mock_Project.Controllers
 
         // PUT:
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRap(int id, RAP rap)
+        public async Task<ActionResult<RAP>> PutRap(int id, [FromForm] IFormFile anh, [FromForm] string tenRap, [FromForm] string diaChi, [FromForm] string soDienThoai)
         {
-            if (id != rap.MaRap)
-            {
-                return BadRequest(new { message = "ID không khớp với MaRap" });
-            }
-            _context.Entry(rap).State = EntityState.Modified;
+            var rap = await _context.RAP.FindAsync(id);
 
-            try
+            if (rap == null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
+
+            rap.TenRap = tenRap;
+            rap.DiaChi = diaChi;
+            rap.SDT = soDienThoai;
+
+            if (anh != null && anh.Length > 0)
             {
-                if (!RapExists(id))
+                var fileName = Path.GetFileNameWithoutExtension(anh.FileName);
+                var extension = Path.GetExtension(anh.FileName);
+                var newFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", newFileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
-                    return NotFound(new { message = "Không tìm thấy rạp với ID này" });
+                    await anh.CopyToAsync(stream);
                 }
-                else
-                {
-                    throw;
-                }
+                rap.Anh = "/images/" + newFileName;
             }
-            return Ok(rap);
+
+            _context.Entry(rap).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
         // POST: 
+        //[HttpPost]
+        //public async Task<ActionResult<RAP>> PostRap(RAP rap)
+        //{
+        //    _context.RAP.Add(rap);
+        //    await _context.SaveChangesAsync();
+
+        //    return CreatedAtAction(nameof(GetRap), new { id = rap.MaRap }, rap);
+        //}
+        //UPLOAD FILE
         [HttpPost]
-        public async Task<ActionResult<RAP>> PostRap(RAP rap)
+        public async Task<ActionResult<RAP_IMAGE>> PostFile([FromForm] RAP_IMAGE rapImage)
         {
+
+            var rap = new RAP
+            {
+                TenRap = rapImage.TenRap,
+                DiaChi = rapImage.DiaChi,
+                SDT = rapImage.SDT,
+            };
+            if (rapImage.Anh != null && rapImage.Anh.Length > 0)
+            {
+
+                var fileName = Path.GetFileNameWithoutExtension(rapImage.Anh.FileName);
+                var extension = Path.GetExtension(rapImage.Anh.FileName);
+
+
+                var newFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                // Lưu file ảnh vào đường dẫn đã chỉ định
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await rapImage.Anh.CopyToAsync(stream);
+                }
+                // Lưu đường dẫn ảnh vào cơ sở dữ liệu (đường dẫn tương đối)
+                rap.Anh = "/images/" + newFileName;
+            }
+
+
             _context.RAP.Add(rap);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetRap), new { id = rap.MaRap }, rap);
+            return CreatedAtAction("GetRap", new { id = rap.MaRap }, rap);
         }
+
 
         // DELETE: 
         [HttpDelete("{id}")]

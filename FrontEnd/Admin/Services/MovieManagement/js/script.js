@@ -18,7 +18,9 @@ async function loadRapData() {
         <td>${phim.theLoai}</td>
         <td>${phim.thoiLuong}</td>
         <td>${phim.khoiChieu}</td>
-        <td><img src="${phim.anh}" alt="Ảnh rạp phim" class="img-thumbnail" style="max-width: 100px;"></td>
+        <td>
+          <img src="https://localhost:7074${phim.anh}" alt="Ảnh phim" class="img-thumbnail" style="max-width: 100px;">
+        </td>
         <td>${phim.moTa}</td>
         <td>
           <a href="edit.html?id=${phim.maPhim}" class="btn btn-warning btn-sm">Sửa</a>
@@ -63,8 +65,15 @@ async function loadData(id) {
       document.getElementById("TheLoai").value = data.theLoai;
       document.getElementById("ThoiLuong").value = data.thoiLuong;
       document.getElementById("KhoiChieu").value = data.khoiChieu;
-      document.getElementById("Anh").value = data.anh;
       document.getElementById("MoTa").value = data.moTa;
+      // Hiển thị ảnh hiện tại
+      const img = document.getElementById("Anh");
+      if (data.anh) {
+        img.src = `https://localhost:7074/images/${data.Anh}`;
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
     } else {
       alert("Không tìm thấy dữ liệu.");
     }
@@ -73,56 +82,37 @@ async function loadData(id) {
     alert("Có lỗi xảy ra khi tải dữ liệu.");
   }
 }
+
 // Xử lý khi trang được tải
 document.addEventListener("DOMContentLoaded", () => {
-  // Nạp dữ liệu rạp phim vào bảng
-  loadRapData();
-  // Xử lý form sửa thông tin
-  const form = document.getElementById("editForm1");
+  // Nạp dữ liệu  phim vào bảng
   const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id"); 
+  const id = urlParams.get("id");
 
   if (id) {
-    form.setAttribute("data-id", id);
-    loadData(id); 
+    loadData(id);
   }
+
+  // Xử lý form sửa thông tin
+  const form = document.getElementById("editForm1");
+
   form.addEventListener("submit", async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const id = form.getAttribute("data-id");
-    console.log(id);
-    // Thu thập dữ liệu từ form
+    const id = new URLSearchParams(window.location.search).get("id");
+    const formData = new FormData(form);
+    formData.append('maRap', id);
 
-    const tenPhim = document.getElementById("TenPhim").value 
-    const theLoai = document.getElementById("TheLoai").value;
-    const thoiLuong = document.getElementById("ThoiLuong").value;
-    const khoiChieu = document.getElementById("KhoiChieu").value;
-    const khoiChieuFormatted = khoiChieu + ":00"; 
-    const anh = document.getElementById("Anh").value;
-    const moTa = document.getElementById("MoTa").value;
-
-    const updatedData = {
-      maPhim: id,
-      tenPhim: tenPhim,
-      theLoai: theLoai,
-      thoiLuong: thoiLuong,
-      khoiChieu: khoiChieu,
-      anh: anh,
-      moTa: moTa,
-    };
-    console.log(updatedData);
     try {
       // Gửi yêu cầu PUT đến API
       const response = await fetch(`${API}/${id}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedData),
+        body: formData,
       });
+
       if (response.ok) {
         alert("Cập nhật thành công!");
-        window.location.href = "list.html"; 
+        window.location.href = "list.html";
       } else {
         alert("Có lỗi xảy ra khi cập nhật.");
         console.error("Update failed:", response.status);
