@@ -50,41 +50,78 @@ async function deleteRap(id) {
     }
   }
 }
-//Thêm
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form');
-  form.addEventListener('submit', async (event) => {
+
+//Sửa rạp phim
+//Load old data
+async function loadData(id) {
+  try {
+    const response = await fetch(`${API}/${id}`);
+    if (response.ok) {
+      const data = await response.json();
+      document.getElementById("tenRap").value = data.tenRap;
+      document.getElementById("diaChi").value = data.diaChi;
+      document.getElementById("anh").value = data.anh;
+      document.getElementById("soDienThoai").value = data.sdt;
+    } else {
+      alert("Không tìm thấy dữ liệu.");
+    }
+  } catch (error) {
+    console.error("Lỗi:", error);
+    alert("Có lỗi xảy ra khi tải dữ liệu.");
+  }
+}
+// Xử lý khi trang được tải
+document.addEventListener("DOMContentLoaded", () => {
+  // Nạp dữ liệu rạp phim vào bảng
+  loadRapData();
+  
+  // Xử lý form sửa thông tin
+  const form = document.getElementById("editForm");
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id"); 
+
+  if (id) {
+    form.setAttribute("data-id", id);
+    loadData(id); 
+  }
+  form.addEventListener("submit", async (event) => {
     event.preventDefault(); 
+
+    const id = form.getAttribute("data-id");
+    console.log(id);
     // Thu thập dữ liệu từ form
-    const tenRap = document.getElementById('tenRap').value;
-    const diaChi = document.getElementById('diaChi').value;
-    const anh = document.getElementById('anh').value;
-    const sdt = document.getElementById('sdt').value;
-    const newRap = {
+    const tenRap = document.getElementById("tenRap").value;
+    const diaChi = document.getElementById("diaChi").value;
+    const anh = document.getElementById("anh").value;
+    const soDienThoai = document.getElementById("soDienThoai").value;
+
+    const updatedData = {
+      maRap: id,
       tenRap: tenRap,
       diaChi: diaChi,
       anh: anh,
-      sdt: sdt
+      soDienThoai: soDienThoai,
     };
+
     try {
-      // Gửi yêu cầu POST đến API
-      const response = await fetch(API, {
-        method: 'POST',
+      // Gửi yêu cầu PUT đến API
+      const response = await fetch(`${API}/${id}`, {
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(newRap),
+        body: JSON.stringify(updatedData),
       });
       if (response.ok) {
-        alert('Thêm rạp phim thành công!');
-        window.location.href = 'list.html'; // Chuyển hướng về danh sách sau khi thêm
+        alert("Cập nhật thành công!");
+        window.location.href = "list.html"; 
       } else {
-        alert('Có lỗi xảy ra khi thêm rạp phim.');
-        console.error('Add failed:', response.status);
+        alert("Có lỗi xảy ra khi cập nhật.");
+        console.error("Update failed:", response.status);
       }
     } catch (error) {
-      console.error('Lỗi:', error);
-      alert('Có lỗi xảy ra khi thêm rạp phim.');
+      console.error("Lỗi:", error);
+      alert("Có lỗi xảy ra khi cập nhật.");
     }
   });
 });

@@ -46,9 +46,8 @@ namespace Mock_Project.Controllers
         {
             if (id != rap.MaRap)
             {
-                return BadRequest();
+                return BadRequest(new { message = "ID không khớp với MaRap" });
             }
-
             _context.Entry(rap).State = EntityState.Modified;
 
             try
@@ -59,15 +58,14 @@ namespace Mock_Project.Controllers
             {
                 if (!RapExists(id))
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Không tìm thấy rạp với ID này" });
                 }
                 else
                 {
                     throw;
                 }
             }
-
-            return NoContent();
+            return Ok(rap);
         }
 
         // POST: 

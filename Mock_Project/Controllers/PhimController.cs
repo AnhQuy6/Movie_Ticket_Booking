@@ -40,9 +40,8 @@ namespace Mock_Project.Controllers
         {
             if (id != phim.MaPhim)
             {
-                return BadRequest();
+                return BadRequest(new { message = "ID không khớp với MaPhim" });
             }
-
             _context.Entry(phim).State = EntityState.Modified;
 
             try
@@ -53,17 +52,15 @@ namespace Mock_Project.Controllers
             {
                 if (!PhimExists(id))
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Không tìm thấy phim với ID này" });
                 }
                 else
                 {
                     throw;
                 }
             }
-
-            return NoContent();
+            return Ok(phim); 
         }
-
         // POST
         [HttpPost]
         public async Task<ActionResult<PHIM>> PostPhim(PHIM phim)
