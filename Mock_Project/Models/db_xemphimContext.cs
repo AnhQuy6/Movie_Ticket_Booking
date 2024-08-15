@@ -37,7 +37,7 @@ public partial class db_xemphimContext : DbContext
             entity.HasKey(e => e.MaPhim).HasName("PK__PHIM__4AC03DE3A6E2E1A5");
 
             entity.Property(e => e.Anh)
-                .HasMaxLength(30)
+                .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.MoTa).HasColumnType("text");
             entity.Property(e => e.TenPhim)
@@ -111,25 +111,25 @@ public partial class db_xemphimContext : DbContext
             entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__27250070872CB56E");
 
             entity.Property(e => e.DiaChi)
-                .HasMaxLength(30)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Email)
-                .HasMaxLength(30)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.MatKhau)
                 .IsRequired()
-                .HasMaxLength(30)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.SDT)
-                .HasMaxLength(15)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.TenNguoiDung)
                 .IsRequired()
-                .HasMaxLength(30)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.TenTK)
                 .IsRequired()
-                .HasMaxLength(30)
+                .HasMaxLength(100)
                 .IsUnicode(false);
         });
 
