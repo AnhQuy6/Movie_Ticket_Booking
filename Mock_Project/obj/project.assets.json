@@ -4527,11 +4527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thaot\\Source\\Repos\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+      "projectUniqueName": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
       "projectName": "Mock_Project",
-      "projectPath": "C:\\Users\\thaot\\Source\\Repos\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+      "projectPath": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
       "packagesPath": "C:\\Users\\thaot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thaot\\Source\\Repos\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
+      "outputPath": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thaot\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4605,5 +4605,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
