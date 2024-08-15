@@ -49,7 +49,7 @@ namespace Mock_Project.Controllers
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(50),
+                expires: DateTime.Now.AddDays(10),
                 signingCredentials: creds
             );
 
@@ -57,6 +57,7 @@ namespace Mock_Project.Controllers
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
+                userId = user.MaTK,
                 expiration = token.ValidTo
             });
         }

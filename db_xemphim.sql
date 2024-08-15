@@ -2,6 +2,7 @@
 drop database db_xemphim;
 use db_xemphim;
 use master;
+
 ﻿CREATE TABLE RAP (
     MaRap  INT IDENTITY(1,1) PRIMARY KEY, 
     TenRap VARCHAR(30) NOT NULL, 
@@ -60,6 +61,9 @@ CREATE TABLE VEPHIM (
     FOREIGN KEY (MaSuatChieu) REFERENCES SUATCHIEU(MaSuatChieu)
 );
 select * from VEPHIM
+
+insert into TAIKHOAN values (1, 'admin', 'admin123', 'HN', '2003-02-23', 'admin@gmail.com', '0977572993', 'admin')
+
 INSERT INTO RAP (TenRap, DiaChi, Anh, SDT)  
 VALUES ('CGV Cinema', N'Aeon Hà Đông', '../../../../images/rapcgv.jpg', '0987654321');  
 
@@ -115,3 +119,8 @@ INSERT INTO SUATCHIEU (MaPhim, MaPhong, NgayChieu, ThoiGianBatDau) VALUES (5, 5,
 INSERT INTO SUATCHIEU (MaPhim, MaPhong, NgayChieu, ThoiGianBatDau) VALUES (6, 6, '2024-08-15', '10:00:00');
 INSERT INTO SUATCHIEU (MaPhim, MaPhong, NgayChieu, ThoiGianBatDau) VALUES (6, 6, '2024-08-15', '13:00:00');
 INSERT INTO SUATCHIEU (MaPhim, MaPhong, NgayChieu, ThoiGianBatDau) VALUES (6, 6, '2024-08-15', '16:00:00');
+
+
+delete from TAIKHOAN
+
+delete from PHIM

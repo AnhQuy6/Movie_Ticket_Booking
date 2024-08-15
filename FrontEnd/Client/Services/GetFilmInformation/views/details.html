@@ -41,7 +41,7 @@
         .then(movie => {  
             const movieDetails = document.getElementById('movie-details');  
             movieDetails.innerHTML = `  
-                <img src="${movie.anh}" alt="${movie.tenPhim}">  
+                <img src="https://localhost:7074${movie.anh}" alt="Ảnh phim">
                 <h2>${movie.tenPhim}</h2>  
                 <p>Thời lượng: ${movie.thoiLuong}</p>  
                 <p>Thể loại: ${movie.theLoai}</p>  

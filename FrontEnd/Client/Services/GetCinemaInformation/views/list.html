@@ -105,7 +105,7 @@
             rapDiv.className = 'rap';
             rapDiv.innerHTML = `
                 <a href="#" onclick="loadRapDetails(${rap.maRap})">
-                    <img src="${rap.anh}" alt="Rạp ${rap.tenRap}">
+                    <img src="https://localhost:7074${rap.anh}" alt="Ảnh rap">
                     <p>${rap.tenRap}</p>
                 </a>
             `;
@@ -120,7 +120,7 @@
         const rapDetailsDiv = document.getElementById('rapDetails');
         rapDetailsDiv.innerHTML = `
             <div class="image-container">
-                <img src="${rap.anh}" alt="Rạp">
+                <img src="https://localhost:7074${rap.anh}" alt="Ảnh phim">
             </div>
             <p><strong>Rạp:</strong> ${rap.tenRap}</p>
             <p><strong>Địa chỉ:</strong> ${rap.diaChi}</p>

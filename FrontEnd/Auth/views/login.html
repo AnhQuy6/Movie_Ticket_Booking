@@ -4,14 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Auth/css/style.css">
     <title>Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .container fieldset {
+            border: none;
+        }
+
+        .container legend {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <form method="post" action="">
+        <form method="post" id="loginForm">
             <fieldset>
                 <legend>Đăng nhập</legend>
                 <label for="ten_tk">Tên tài khoản:</label>
@@ -20,6 +83,9 @@
                 <label for="mat_khau">Mật khẩu:</label>
                 <input type="password" id="mat_khau" name="mat_khau" required><br>
 
+                <!-- Checkbox để hiển thị mật khẩu -->
+                <input type="checkbox" id="showPassword"> Hiển thị mật khẩu<br><br>
+
                 <input type="submit" value="Đăng nhập">
 
             </fieldset>
@@ -27,10 +93,67 @@
         <div>
             <a href="../adminWeb">Trang Admin</a>
         </div>
-        <a href="../index">Trang chủ</a>
+        <a href="../../../index.html">Trang chủ</a>
         <p>Bạn chưa có tài khoản?</p>
         <a href="register.html">Đăng ký</a>
     </div>
+    <script>
+        // Chức năng hiển thị mật khẩu
+        document.getElementById('showPassword').addEventListener('change', function () {
+            var matKhauInput = document.getElementById('mat_khau');
+            if (this.checked) {
+                matKhauInput.type = 'text'; // Hiển thị mật khẩu
+            } else {
+                matKhauInput.type = 'password'; // Ẩn mật khẩu
+            }
+        });
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var tenTK = document.getElementById("ten_tk").value;
+            var matKhau = document.getElementById("mat_khau").value;
+            fetch('https://localhost:7074/api/TaiKhoan/Login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    TenTK: tenTK,
+                    MatKhau: matKhau
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Đăng nhập thất bại.');
+                }
+            })
+            .then(data => {
+                localStorage.setItem('token', data.token); 
+                localStorage.setItem('username', tenTK); // Lưu tên người dùng vào localStorage  
+                localStorage.setItem('userId', data.userId);
+                // Kiểm tra xem người dùng có phải là admin không
+                if (tenTK === 'admin' && matKhau === 'admin123') {
+                    window.location.href = "../../Admin/Dashboard/Views/home.html"; // Chuyển đến trang admin
+                }                  
+                if(data) {
+          
+                    if (tenTK === 'admin' && matKhau === 'admin123') {
+                    window.location.href = "../../Admin/Dashboard/Views/home.html"; // Chuyển đến trang admin
+                    }
+                    else {
+                        window.location.href = "../../../index.html";
+                    }
+                }
+                
+            })
+            .catch((error) => {
+                alert(error.message);
+            });
+        });
+    </script>
 </body>
 
 </html>
