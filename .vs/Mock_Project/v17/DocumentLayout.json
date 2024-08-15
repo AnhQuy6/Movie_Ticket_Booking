@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\FPT\\Movie_Ticket_Booking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\controllers\\phimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|d:\\fpt\\movie_ticket_booking\\mock_project\\controllers\\phimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\controllers\\phimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\models\\phim_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\models\\phim_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\controllers\\rapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\models\\rap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|d:\\fpt\\movie_ticket_booking\\mock_project\\models\\rap_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\models\\rap_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\models\\rap_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|d:\\fpt\\movie_ticket_booking\\mock_project\\models\\phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\models\\phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\models\\phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\models\\phim_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\models\\phim_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|D:\\FPT\\Movie_Ticket_Booking\\mock_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RapController.cs",
               "DocumentMoniker": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\RapController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\RapController.cs",
@@ -86,8 +86,7 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\RapController.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAqwGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T07:59:43.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T07:59:43.337Z"
             },
             {
               "$type": "Document",
@@ -97,14 +96,14 @@
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\PhimController.cs",
               "ToolTip": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\PhimController.cs",
               "RelativeToolTip": "Mock_Project\\Controllers\\PhimController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAewC8AAAAjAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAnwGcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T07:17:43.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RAP.cs",
               "DocumentMoniker": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Models\\RAP.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Models\\RAP.cs",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "Mock_Project\\Models\\RAP.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T04:12:54.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T04:12:54.212Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "Mock_Project\\Program.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAgwC8AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T04:11:28.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T04:11:28.031Z"
             },
             {
               "$type": "Document",
@@ -138,12 +135,11 @@
               "RelativeToolTip": "Mock_Project\\Models\\db_xemphimContext.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAAwIQAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T05:08:48.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T05:08:48.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PHIM.cs",
               "DocumentMoniker": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Models\\PHIM.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Models\\PHIM.cs",
@@ -151,25 +147,23 @@
               "RelativeToolTip": "Mock_Project\\Models\\PHIM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T07:19:49.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T07:19:49.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "PHIM_IMAGE.cs",
               "DocumentMoniker": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Models\\PHIM_IMAGE.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Models\\PHIM_IMAGE.cs",
               "ToolTip": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Models\\PHIM_IMAGE.cs",
               "RelativeToolTip": "Mock_Project\\Models\\PHIM_IMAGE.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T04:08:39.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T04:08:39.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RAP_IMAGE.cs",
               "DocumentMoniker": "D:\\FPT\\Movie_Ticket_Booking\\Mock_Project\\Models\\RAP_IMAGE.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Models\\RAP_IMAGE.cs",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "Mock_Project\\Models\\RAP_IMAGE.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T15:09:35.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T15:09:35.451Z"
             },
             {
               "$type": "Document",
@@ -190,8 +183,7 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\TaiKhoanController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T04:11:27.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T04:11:27.86Z"
             },
             {
               "$type": "Document",
