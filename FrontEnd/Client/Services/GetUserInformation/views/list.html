@@ -1,21 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/Admin/Dashboard/css/style.css">
-  </head>
-<body>
-  <!-- Header -->
-   <h1>Lấy thông tin người dùng</h1>
-  <!-- Footer -->
+    <title>Sửa tài khoản</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+    function checkChanges() {
+        var currentTenTK = document.getElementById("TenTK").value;
+        var currentTenNguoiDung = document.getElementById("TenNguoiDung").value;
+        var currentNgaySinh = document.getElementById("NgaySinh").value;
+        var currentDiaChi = document.getElementById("DiaChi").value;
+        var currentSDT = document.getElementById("SDT").value;
+        var currentEmail = document.getElementById("Email").value;
+
+        if (currentTenTK == initialData.TenTK ||
+            currentTenNguoiDung == initialData.TenNguoiDung ||
+            currentNgaySinh == initialData.NgaySinh ||
+            currentDiaChi == initialData.DiaChi ||
+            currentSDT == initialData.SDT ||
+            currentEmail == initialData.Email) {
+
+           alert("Bạn chưa thay đổi gì!");
+           return false;
+        }
+
+        return true;
+    }
+
+    let initialData = {};
+
+    function loadUserData() {
+        fetch("https://localhost:7074/api/XemThongTinCaNhan/1") 
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById("TenTK").value = data.tenTK;
+                document.getElementById("TenNguoiDung").value = data.tenNguoiDung;
+                document.getElementById("NgaySinh").value = data.ngaySinh;
+                document.getElementById("DiaChi").value = data.diaChi;
+                document.getElementById("SDT").value = data.sdt;
+                document.getElementById("Email").value = data.email;
+
+                initialData = { ...data };
+            });
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+
+        if (!checkChanges()) {
+            return;
+        }
+
+        var userId = 1; 
+
+        var user = {
+            tenTK: document.getElementById("TenTK").value,
+            tenNguoiDung: document.getElementById("TenNguoiDung").value,
+            ngaySinh: document.getElementById("NgaySinh").value,
+            diaChi: document.getElementById("DiaChi").value,
+            sdt: document.getElementById("SDT").value,
+            email: document.getElementById("Email").value
+        };
+        console.log(user);
+        fetch(`https://localhost:7074/api/XemThongTinCaNhan/${userId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Thông tin đã được cập nhật!");
+            loadUserData(); 
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loadUserData(); 
+
+        document.getElementById("userForm").addEventListener("submit", submitForm);
+    });
+    </script>
+</head>
+
+<body style="background-color: rgb(253, 252, 240);">
+    <div class="container mt-5">
+        <form id="userForm">
+            <h2 class="mb-4 text-center">Xem thông tin tài khoản</h2>
+            <div class="form-group row">
+                <label for="TenTK" class="col-sm-3 col-form-label">Tên tài khoản:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="TenTK" name="TenTK" readonly class="form-control readonly-input">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="TenNguoiDung" class="col-sm-3 col-form-label">Tên Người dùng:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="TenNguoiDung" name="TenNguoiDung" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="NgaySinh" class="col-sm-3 col-form-label">Ngày sinh:</label>
+                <div class="col-sm-9">
+                    <input type="date" id="NgaySinh" name="NgaySinh" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="DiaChi" class="col-sm-3 col-form-label">Địa chỉ:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="DiaChi" name="DiaChi" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="SDT" class="col-sm-3 col-form-label">Số điện thoại:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="SDT" name="SDT" readonly class="form-control readonly-input">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Email" class="col-sm-3 col-form-label">Email:</label>
+                <div class="col-sm-9">
+                    <input type="email" id="Email" name="Email" readonly class="form-control readonly-input">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
