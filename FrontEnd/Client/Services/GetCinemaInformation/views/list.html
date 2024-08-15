@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Rạp</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #d9534f;
+            margin: 20px 0;
+            font-size: 28px;
+        }
+        .rap-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .rap {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .rap:hover {
+            transform: translateY(-5px);
+            border-color: #d9534f; 
+        }
+        .rap img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .rap p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            font-size: 16px;
+            color: #d9534f; /* Màu chữ của tên rạp */
+        }
+        .thong-tin-rap {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .thong-tin-rap h2 {
+            color: #d9534f;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .thong-tin-rap img {
+            width: 70%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .thong-tin-rap p {
+            font-size: 18px;
+            color: #444;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Danh Sách Rạp</h1>
+<div class="rap-list" id="rapList"></div>
+
+<div class="thong-tin-rap" id="rapInfo">
+    <h2>Thông Tin Rạp</h2>
+    <div id="rapDetails"></div>
+</div>
+
+<script>
+    async function loadRaps() {
+        const response = await fetch('https://localhost:7074/api/RAP');
+        const raps = await response.json();
+        
+        const rapListDiv = document.getElementById('rapList');
+        rapListDiv.innerHTML = '';
+
+        raps.forEach(rap => {
+            const rapDiv = document.createElement('div');
+            rapDiv.className = 'rap';
+            rapDiv.innerHTML = `
+                <a href="#" onclick="loadRapDetails(${rap.maRap})">
+                    <img src="${rap.anh}" alt="Rạp ${rap.tenRap}">
+                    <p>${rap.tenRap}</p>
+                </a>
+            `;
+            rapListDiv.appendChild(rapDiv);
+        });
+    }
+
+    async function loadRapDetails(id) {
+        const response = await fetch(`https://localhost:7074/api/RAP/${id}`);
+        const rap = await response.json();
+
+        const rapDetailsDiv = document.getElementById('rapDetails');
+        rapDetailsDiv.innerHTML = `
+            <div class="image-container">
+                <img src="${rap.anh}" alt="Rạp">
+            </div>
+            <p><strong>Rạp:</strong> ${rap.tenRap}</p>
+            <p><strong>Địa chỉ:</strong> ${rap.diaChi}</p>
+            <p><strong>Số điện thoại:</strong> ${rap.sdt}</p>
+        `;
+
+        document.getElementById('rapInfo').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = loadRaps;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.container fieldset {
+    border: none;
+}
+
+.container legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container input[type="email"],
+.container input[type="date"],
+.container input[type="ten_nd"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
