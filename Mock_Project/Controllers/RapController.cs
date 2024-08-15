@@ -17,14 +17,12 @@ namespace Mock_Project.Controllers
             _context = context;
         }
 
-        // GET: api/rap  
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RAP>>> GetRaps()
         {
             return await _context.RAP.ToListAsync();
         }
 
-        // GET: api/rap/5  
         [HttpGet("{id}")]
         public async Task<ActionResult<RAP>> GetRap(int id)
         {
