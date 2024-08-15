@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Sửa phim</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
@@ -16,9 +15,10 @@
   </head>
 
 <body>
+    <div id="header"></div>
     <div class="container mt-5">
         <h1 class="mb-4">Sửa Phim</h1>
-        <form action="" method="POST">
+        <form id="editForm1" data-id="" action="" method="post">
             <div class="form-group">
                 <label for="TenPhim">Tên Phim:</label>
                 <input type="text" class="form-control" id="TenPhim" name="TenPhim" value="">
@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="Anh">Ảnh:</label>
-                <input type="text" class="form-control" id="Anh" name="Anh" value="">
+                <input type="file" class="form-control" id="Anh" name="Anh" value="">
             </div>
             <div class="form-group">
                 <label for="MoTa">Mô Tả:</label>
@@ -50,8 +50,12 @@
         </form>
         <a href="list.html" class="btn btn-secondary mt-3">Trở về danh sách</a>
     </div>
-
-    <!-- Bootstrap JS and dependencies (if needed) -->
+    <div id="footer"></div>
+    <script src="/Admin/Components/js/script.js"></script>
+    <script src="/Admin/Services/MovieManagement/js/script.js"></script>
+    <!-- Bootstrap JS và các file script khác -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 

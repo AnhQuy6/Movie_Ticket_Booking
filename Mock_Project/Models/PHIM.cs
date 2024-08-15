@@ -15,11 +15,11 @@ public partial class PHIM
 
     public string ThoiLuong { get; set; }
 
-    public TimeOnly? KhoiChieu { get; set; }
+    public TimeOnly KhoiChieu { get; set; }
 
     public string Anh { get; set; }
-
     public string MoTa { get; set; }
+    //public byte[] Anh { get; set; }
 
     public virtual ICollection<SUATCHIEU> SUATCHIEU { get; set; } = new List<SUATCHIEU>();
 }

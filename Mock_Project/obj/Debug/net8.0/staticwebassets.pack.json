@@ -1,0 +1,97 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg",
+      "PackagePath": "staticwebassets\\images\\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg",
+      "PackagePath": "staticwebassets\\images\\conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg",
+      "PackagePath": "staticwebassets\\images\\doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg",
+      "PackagePath": "staticwebassets\\images\\mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg",
+      "PackagePath": "staticwebassets\\images\\nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg",
+      "PackagePath": "staticwebassets\\images\\nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg",
+      "PackagePath": "staticwebassets\\images\\nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg",
+      "PackagePath": "staticwebassets\\images\\nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png",
+      "PackagePath": "staticwebassets\\images\\rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png",
+      "PackagePath": "staticwebassets\\images\\rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg",
+      "PackagePath": "staticwebassets\\images\\rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg",
+      "PackagePath": "staticwebassets\\images\\rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_7294864f-b265-4013-944d-27c72411f085.jpg",
+      "PackagePath": "staticwebassets\\images\\rapcine_7294864f-b265-4013-944d-27c72411f085.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg",
+      "PackagePath": "staticwebassets\\images\\rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg",
+      "PackagePath": "staticwebassets\\images\\rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg",
+      "PackagePath": "staticwebassets\\images\\rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg",
+      "PackagePath": "staticwebassets\\images\\rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg",
+      "PackagePath": "staticwebassets\\images\\raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thaot\\source\\repos\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg",
+      "PackagePath": "staticwebassets\\images\\raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Mock_Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Mock_Project.props",
+      "PackagePath": "build\\Mock_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Mock_Project.props",
+      "PackagePath": "buildMultiTargeting\\Mock_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Mock_Project.props",
+      "PackagePath": "buildTransitive\\Mock_Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
