@@ -27,6 +27,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[ROLE]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[SUATCHIEU]",
          "ObjectType": 0
       },

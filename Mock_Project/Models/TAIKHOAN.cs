@@ -23,5 +23,9 @@ public partial class TAIKHOAN
 
     public string TenNguoiDung { get; set; }
 
+    public int? MaRole { get; set; }
+
+    public virtual ROLE MaRoleNavigation { get; set; }
+
     public virtual ICollection<VEPHIM> VEPHIM { get; set; } = new List<VEPHIM>();
 }

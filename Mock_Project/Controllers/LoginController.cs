@@ -44,7 +44,6 @@ namespace Mock_Project.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            // Tạo token JWT
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
@@ -53,7 +52,6 @@ namespace Mock_Project.Controllers
                 signingCredentials: creds
             );
 
-            // Trả về token cho client
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),

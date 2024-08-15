@@ -23,6 +23,8 @@ public partial class db_xemphimContext : DbContext
 
     public virtual DbSet<RAP> RAP { get; set; }
 
+    public virtual DbSet<ROLE> ROLE { get; set; }
+
     public virtual DbSet<SUATCHIEU> SUATCHIEU { get; set; }
 
     public virtual DbSet<TAIKHOAN> TAIKHOAN { get; set; }
@@ -34,11 +36,7 @@ public partial class db_xemphimContext : DbContext
     {
         modelBuilder.Entity<PHIM>(entity =>
         {
-
             entity.HasKey(e => e.MaPhim).HasName("PK__PHIM__4AC03DE3C61F2191");
-
-            entity.HasKey(e => e.MaPhim).HasName("PK__PHIM__4AC03DE3A6E2E1A5");
-
 
             entity.Property(e => e.Anh)
                 .HasMaxLength(30)
@@ -60,11 +58,7 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<PHONG>(entity =>
         {
-
             entity.HasKey(e => e.MaPhong).HasName("PK__PHONG__20BD5E5BB55A4C63");
-
-            entity.HasKey(e => e.MaPhong).HasName("PK__PHONG__20BD5E5B9CF3BB84");
-
 
             entity.Property(e => e.TenPhong)
                 .IsRequired()
@@ -79,11 +73,7 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<RAP>(entity =>
         {
-
             entity.HasKey(e => e.MaRap).HasName("PK__RAP__3961207FD7B9B51A");
-
-            entity.HasKey(e => e.MaRap).HasName("PK__RAP__3961207FC3A9C024");
-
 
             entity.Property(e => e.Anh)
                 .HasMaxLength(255)
@@ -101,13 +91,19 @@ public partial class db_xemphimContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<ROLE>(entity =>
+        {
+            entity.HasKey(e => e.MaRole).HasName("PK__ROLE__0639A0FDB0951D22");
+
+            entity.Property(e => e.TenRole)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<SUATCHIEU>(entity =>
         {
-
             entity.HasKey(e => e.MaSuatChieu).HasName("PK__SUATCHIE__CF5984D297A065BC");
-
-            entity.HasKey(e => e.MaSuatChieu).HasName("PK__SUATCHIE__CF5984D268EF1453");
-
 
             entity.Property(e => e.NgayChieu).HasColumnType("datetime");
 
@@ -124,7 +120,6 @@ public partial class db_xemphimContext : DbContext
 
         modelBuilder.Entity<TAIKHOAN>(entity =>
         {
-
             entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__272500705F801E14");
 
             entity.Property(e => e.DiaChi)
@@ -146,40 +141,17 @@ public partial class db_xemphimContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.TenTK)
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(100)
+                .IsUnicode(false);
 
-            entity.HasKey(e => e.MaTK).HasName("PK__TAIKHOAN__27250070872CB56E");
-
-            entity.Property(e => e.DiaChi)
-                .HasMaxLength(30)
-                .IsUnicode(false);
-            entity.Property(e => e.Email)
-                .HasMaxLength(30)
-                .IsUnicode(false);
-            entity.Property(e => e.MatKhau)
-                .IsRequired()
-                .HasMaxLength(30)
-                .IsUnicode(false);
-            entity.Property(e => e.SDT)
-                .HasMaxLength(15)
-                .IsUnicode(false);
-            entity.Property(e => e.TenNguoiDung)
-                .IsRequired()
-                .HasMaxLength(30)
-                .IsUnicode(false);
-            entity.Property(e => e.TenTK)
-                .IsRequired()
-                .HasMaxLength(30)
-                .IsUnicode(false);
+            entity.HasOne(d => d.MaRoleNavigation).WithMany(p => p.TAIKHOAN)
+                .HasForeignKey(d => d.MaRole)
+                .HasConstraintName("FK__TAIKHOAN__MaRole__6754599E");
         });
 
         modelBuilder.Entity<VEPHIM>(entity =>
         {
-
             entity.HasKey(e => e.MaVe).HasName("PK__VEPHIM__2725100F94EB4B4B");
-
-            entity.HasKey(e => e.MaVe).HasName("PK__VEPHIM__2725100FD97866ED");
-
 
             entity.Property(e => e.PTTT)
                 .HasMaxLength(255)

@@ -120,13 +120,19 @@
     })
     .then(data => {
         localStorage.setItem('token', data.token); 
-        localStorage.setItem('username', tenTK); // Lưu tên người dùng vào localStorage
-        window.location.href = "trangchu.html"; // Chuyển về trang chủ sau khi đăng nhập thành công
+        localStorage.setItem('username', tenTK);
+
+        if (tenTK === 'admin' && matKhau === 'Admin123') {
+            window.location.href = "admin.html"; 
+        } else {
+            window.location.href = "trangchu.html"; 
+        }
     })
     .catch((error) => {
         alert(error.message);
     });
 });
+
 
     </script>
     
