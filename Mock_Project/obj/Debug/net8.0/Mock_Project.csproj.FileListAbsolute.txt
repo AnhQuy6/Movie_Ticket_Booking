@@ -818,3 +818,6 @@ F:\Clone\Movie_Ticket_Booking\Mock_Project\obj\Debug\net8.0\refint\Mock_Project.
 F:\Clone\Movie_Ticket_Booking\Mock_Project\obj\Debug\net8.0\Mock_Project.pdb
 F:\Clone\Movie_Ticket_Booking\Mock_Project\obj\Debug\net8.0\Mock_Project.genruntimeconfig.cache
 F:\Clone\Movie_Ticket_Booking\Mock_Project\obj\Debug\net8.0\ref\Mock_Project.dll
+D:\ngon_ngu_lt\THUCTAP_C#\project-movie\Movie_Ticket_Booking\Mock_Project\bin\Debug\net8.0\Mock_Project.staticwebassets.runtime.json
+D:\ngon_ngu_lt\THUCTAP_C#\project-movie\Movie_Ticket_Booking\Mock_Project\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\ngon_ngu_lt\THUCTAP_C#\project-movie\Movie_Ticket_Booking\Mock_Project\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

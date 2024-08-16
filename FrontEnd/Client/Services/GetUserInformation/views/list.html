@@ -32,12 +32,13 @@
     let initialData = {};
 
     function loadUserData() {
-        fetch("https://localhost:7074/api/XemThongTinCaNhan/1") 
+        const userId = localStorage.getItem("userId");
+        fetch(`https://localhost:7074/api/XemThongTinCaNhan/${userId}`) 
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 document.getElementById("TenTK").value = data.tenTK;
                 document.getElementById("TenNguoiDung").value = data.tenNguoiDung;
+                document.getElementById("MatKhau").value = data.matKhau;
                 document.getElementById("NgaySinh").value = data.ngaySinh;
                 document.getElementById("DiaChi").value = data.diaChi;
                 document.getElementById("SDT").value = data.sdt;
@@ -59,6 +60,7 @@
         var user = {
             tenTK: document.getElementById("TenTK").value,
             tenNguoiDung: document.getElementById("TenNguoiDung").value,
+            matKhau: document.getElementById("MatKhau").value,
             ngaySinh: document.getElementById("NgaySinh").value,
             diaChi: document.getElementById("DiaChi").value,
             sdt: document.getElementById("SDT").value,
@@ -95,13 +97,19 @@
             <div class="form-group row">
                 <label for="TenTK" class="col-sm-3 col-form-label">Tên tài khoản:</label>
                 <div class="col-sm-9">
-                    <input type="text" id="TenTK" name="TenTK" readonly class="form-control readonly-input">
+                    <input type="text" id="TenTK" name="TenTK"  class="form-control readonly-input">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="TenNguoiDung" class="col-sm-3 col-form-label">Tên Người dùng:</label>
                 <div class="col-sm-9">
                     <input type="text" id="TenNguoiDung" name="TenNguoiDung" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="matKhau" class="col-sm-3 col-form-label">Mật khẩu:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="MatKhau" name="MatKhau" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
@@ -119,17 +127,20 @@
             <div class="form-group row">
                 <label for="SDT" class="col-sm-3 col-form-label">Số điện thoại:</label>
                 <div class="col-sm-9">
-                    <input type="text" id="SDT" name="SDT" readonly class="form-control readonly-input">
+                    <input type="text" id="SDT" name="SDT"  class="form-control readonly-input">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="Email" class="col-sm-3 col-form-label">Email:</label>
                 <div class="col-sm-9">
-                    <input type="email" id="Email" name="Email" readonly class="form-control readonly-input">
+                    <input type="email" id="Email" name="Email"  class="form-control readonly-input">
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-sm-12 text-center">
+            <div class="form-group row  justify-content-center">
+                <div class="col-sm-6 text-center">
+                    <a href="../../../../index.html" class="btn btn-gray">Trang chủ</a>
+                </div>
+                <div class="col-sm-6 text-center">
                     <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
                 </div>
             </div>

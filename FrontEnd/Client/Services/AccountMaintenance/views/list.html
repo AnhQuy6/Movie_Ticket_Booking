@@ -126,11 +126,16 @@
     <button class="add-button" onclick="toggleForm()">Thêm Tài Khoản Mới</button>
 
     <form id="taiKhoanForm">
+        <input type="hidden" id="taiKhoanId" name="taiKhoanId">
+
         <label for="tenTk">Tên Tài Khoản:</label>
         <input type="text" id="tenTk" name="tenTk" required>
 
         <label for="tenNguoiDung">Tên Người Dùng:</label>
         <input type="text" id="tenNguoiDung" name="tenNguoiDung" required>
+
+        <label for="matKhau">Mật khẩu:</label>
+        <input type="text" id="matKhau" name="matKhau" required>
 
         <label for="ngaySinh">Ngày Sinh:</label>
         <input type="date" id="ngaySinh" name="ngaySinh" required>
@@ -160,6 +165,9 @@
         <tbody>
         </tbody>
     </table>
+    <div class="text-center">
+        <a href="../../../../Admin/Dashboard/views/home.html" class="btn btn-gray">Trang chủ</a>
+    </div>
 </div>
 
 <script>
@@ -170,8 +178,16 @@
     const taiKhoanData = {};
     formData.forEach((value, key) => taiKhoanData[key] = value);
 
-    fetch("https://localhost:7074/api/BaoTriTaiKhoan", {
-        method: "POST", 
+    let url = "https://localhost:7074/api/BaoTriTaiKhoan";
+    let method = "POST";
+    
+    if (taiKhoanData.taiKhoanId) { 
+        url += `/${taiKhoanData.taiKhoanId}`;
+        method = "PUT"; 
+    }
+
+    fetch(url, {
+        method: method, 
         headers: {
             "Content-Type": "application/json"
         },
@@ -179,7 +195,7 @@
     })
     .then(response => response.json())
     .then(data => {
-        alert("Tài khoản đã được lưu thành công!");
+        alert(method === "POST" ? "Tài khoản đã được lưu thành công!" : "Tài khoản đã được cập nhật thành công!");
         loadTaiKhoans(); 
         toggleForm(); 
     })
@@ -241,9 +257,10 @@ function editTaiKhoan(id) {
     fetch(`https://localhost:7074/api/BaoTriTaiKhoan/${id}`)
     .then(response => response.json())
     .then(taiKhoan => {
-      console.log(taiKhoan);
+        document.getElementById("taiKhoanId").value = taiKhoan.maTK;
         document.getElementById("tenTk").value = taiKhoan.tenTK;
         document.getElementById("tenNguoiDung").value = taiKhoan.tenNguoiDung;
+        // document.getElementById("matKhau").value = taiKhoan.matKhau;
         document.getElementById("ngaySinh").value = taiKhoan.ngaySinh;
         document.getElementById("diaChi").value = taiKhoan.diaChi;
         document.getElementById("sdt").value = taiKhoan.sdt;

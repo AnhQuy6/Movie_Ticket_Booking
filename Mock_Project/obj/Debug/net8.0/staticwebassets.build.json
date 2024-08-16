@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DbPKqqubRNKKztJsy4/QjdTdV/UZdxemboMOAM11bLY=",
+  "Hash": "I4NuJQ5dEUANVaig/tFy/2zGvRkw1G0GqlqCchXSs8c=",
   "Source": "Mock_Project",
   "BasePath": "_content/Mock_Project",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Mock_Project\\wwwroot",
       "Source": "Mock_Project",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\conan_048d69d3-75de-465c-a20d-aa243ae2073b.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\doraemon_78ee2f3e-986a-45c3-9db7-41c0074d9799.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mai_5a339985-bb2b-4c7f-bb41-b4346652fa62.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nhabanu_8072010d-7902-4d01-8e5b-82179c877f12.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nhabanu_b79b402f-a940-4149-b35d-f701c3cb7362.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nhabanu_bcc24a05-a1c0-48a9-9fe8-a270a61bf096.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nhabanu_c2939533-3e7e-4e2c-bfdf-d7b5be62c468.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapbhd_51f2b885-cbc2-4771-8768-d8db900b8e26.png"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapbhd_f098439d-9d79-4592-bc5e-de0d72452144.png"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapcgv_5c5edcdf-e20d-4996-8e6c-ed6f6ab9f03e.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapcgv_c3edd887-c0e8-4d50-bd3a-6383f8d2ffd3.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_7294864f-b265-4013-944d-27c72411f085.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_7294864f-b265-4013-944d-27c72411f085.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapcine_7294864f-b265-4013-944d-27c72411f085.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapcine_7294864f-b265-4013-944d-27c72411f085.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapcine_9601276b-b9cf-4e29-882d-cb6a7733ab1a.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapcine_9b7e4d38-3f2f-421e-8e12-61b4f7d10987.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapgalaxy_a7041a7e-4ddf-4eea-96cc-911414732e95.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rapgalaxy_ea050253-0997-4b35-a703-8c69d91e14a8.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\images\\raplotte_d81cfb5a-69e9-466d-8c91-97229cf1c867.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg",
       "AssetKind": "All",
@@ -378,10 +378,29 @@
       "OriginalItemSpec": "wwwroot\\images\\raplotte_d88557d0-d4b0-4a20-bc5b-0fde57fdb957.jpg"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-05-30 224249_4a0e6ea9-412f-48d0-ab7c-ec65e3076608.png",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-05-29 141941_542e88f3-1e25-4f0e-b504-767b017ba821.png",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "BasePath": "_content/Mock_Project",
+      "RelativePath": "images/Screenshot 2024-05-29 141941_542e88f3-1e25-4f0e-b504-767b017ba821.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-05-29 141941_542e88f3-1e25-4f0e-b504-767b017ba821.png"
+    },
+    {
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-05-30 224249_4a0e6ea9-412f-48d0-ab7c-ec65e3076608.png",
+      "SourceId": "Mock_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/Screenshot 2024-05-30 224249_4a0e6ea9-412f-48d0-ab7c-ec65e3076608.png",
       "AssetKind": "All",
@@ -397,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-05-30 224249_4a0e6ea9-412f-48d0-ab7c-ec65e3076608.png"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-05-31 220020_3d62ed3b-c334-4c6c-82a6-7c33b9a5d0b3.png",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-05-31 220020_3d62ed3b-c334-4c6c-82a6-7c33b9a5d0b3.png",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/Screenshot 2024-05-31 220020_3d62ed3b-c334-4c6c-82a6-7c33b9a5d0b3.png",
       "AssetKind": "All",
@@ -416,10 +435,29 @@
       "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-05-31 220020_3d62ed3b-c334-4c6c-82a6-7c33b9a5d0b3.png"
     },
     {
-      "Identity": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-06-01 124142_c94f8040-8d6b-4835-8d97-3adc2aa8533c.png",
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-06-01 124142_9a0b1540-5e46-4b71-ba44-b894247ba6de.png",
       "SourceId": "Mock_Project",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Clone\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
+      "BasePath": "_content/Mock_Project",
+      "RelativePath": "images/Screenshot 2024-06-01 124142_9a0b1540-5e46-4b71-ba44-b894247ba6de.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-06-01 124142_9a0b1540-5e46-4b71-ba44-b894247ba6de.png"
+    },
+    {
+      "Identity": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\images\\Screenshot 2024-06-01 124142_c94f8040-8d6b-4835-8d97-3adc2aa8533c.png",
+      "SourceId": "Mock_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\wwwroot\\",
       "BasePath": "_content/Mock_Project",
       "RelativePath": "images/Screenshot 2024-06-01 124142_c94f8040-8d6b-4835-8d97-3adc2aa8533c.png",
       "AssetKind": "All",

@@ -32,8 +32,6 @@ namespace Mock_Project.Controllers
             {
                 return NotFound();
             }
-            taiKhoan.MatKhau = null;
-
             return Ok(taiKhoan);
         }
 
