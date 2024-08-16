@@ -32,7 +32,7 @@
         <main id="movie-details" class="movie-details"></main>  
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {  
+    document.addEventListener('DOMContentLoaded', () => {  
     const urlParams = new URLSearchParams(window.location.search);  
     const movieId = urlParams.get('id');  
 
@@ -51,7 +51,17 @@
             `;  
 
             document.getElementById('datve').addEventListener('click', () => {
-                window.location.href = `../../BookTicket/views/Booking.html?movieId=${movieId}`;
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+                const token = localStorage.getItem('token');
+                if (token) {
+                    // Nếu đã đăng nhập, chuyển hướng đến trang Booking.html
+                    window.location.href = `../../BookTicket/views/Booking.html?movieId=${movieId}`;
+                } else {
+                    // Nếu chưa đăng nhập, hiển thị thông báo yêu cầu đăng nhập
+                    alert('Bạn cần đăng nhập để đặt vé.');
+                    // Chuyển hướng người dùng đến trang đăng nhập
+                    window.location.href = "../FrontEnd/Auth/Views/login.html";
+                }
             });
         })  
         .catch(error => console.error('Error fetching movie details:', error));  

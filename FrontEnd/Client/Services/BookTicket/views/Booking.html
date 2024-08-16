@@ -47,7 +47,6 @@
             margin-bottom: 10px;
         }
     </style>
-    
 </head>
 <body>
     <div class="container seat-container">
@@ -176,21 +175,18 @@
 
                 const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'))
                     .map(seat => seat.dataset.seatNumber);
-
-                const ticketData = {
-                    maSuatChieu: showtimeSelect.value,
-                    maTK: 1, 
-                    giaVe: 100000, 
-                    pttt: 'Tiền mặt',
-                    viTri: selectedSeats.join(',') 
-                };
-
                 fetch('https://localhost:7074/api/Ve/tickets', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(ticketData)
+                    body: JSON.stringify({
+                        maSuatChieu: showtimeSelect.value,
+                        MaTK: localStorage.getItem("userId"),
+                        giaVe: 100000, 
+                        pttt: 'Tiền mặt',
+                        viTri: selectedSeats.join(',')
+                    })
                 })
                 .then(response => {
                     if (!response.ok) {

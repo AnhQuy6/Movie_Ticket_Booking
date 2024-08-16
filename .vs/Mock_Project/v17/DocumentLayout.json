@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|d:\\ngon_ngu_lt\\thuctap_c#\\project-movie\\movie_ticket_booking\\mock_project\\controllers\\vecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\controllers\\vecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|d:\\ngon_ngu_lt\\thuctap_c#\\project-movie\\movie_ticket_booking\\mock_project\\controllers\\xemthongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86A79330-4A53-4459-BFE5-7A8A8AB45B42}|Mock_Project\\Mock_Project.csproj|solutionrelative:mock_project\\controllers\\xemthongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,6 +55,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VeController.cs",
+              "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\VeController.cs",
+              "RelativeDocumentMoniker": "Mock_Project\\Controllers\\VeController.cs",
+              "ToolTip": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\VeController.cs",
+              "RelativeToolTip": "Mock_Project\\Controllers\\VeController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T04:06:32.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "XemThongTinCaNhan.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\XemThongTinCaNhan.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\XemThongTinCaNhan.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\RegisterController.cs",
@@ -71,12 +88,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\RegisterController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:50:04.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:50:04.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RapController.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\RapController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\RapController.cs",
@@ -84,12 +100,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\RapController.cs",
               "ViewState": "AQIAAHYAAAAAAAAAAAAcwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:49:54.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:49:54.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\LoginController.cs",
@@ -97,12 +112,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\LoginController.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:49:40.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:49:40.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GetRapController.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\GetRapController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\GetRapController.cs",
@@ -110,12 +124,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\GetRapController.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:49:37.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:49:37.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GetPhimController.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\GetPhimController.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\GetPhimController.cs",
@@ -123,12 +136,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\GetPhimController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:49:29.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:49:29.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BaoTriTaiKhoan.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Controllers\\BaoTriTaiKhoan.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Controllers\\BaoTriTaiKhoan.cs",
@@ -136,12 +148,11 @@
               "RelativeToolTip": "Mock_Project\\Controllers\\BaoTriTaiKhoan.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:29:40.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:29:40.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PHIM.cs",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Models\\PHIM.cs",
               "RelativeDocumentMoniker": "Mock_Project\\Models\\PHIM.cs",
@@ -149,12 +160,11 @@
               "RelativeToolTip": "Mock_Project\\Models\\PHIM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:48:52.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T02:48:52.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\appsettings.json",
               "RelativeDocumentMoniker": "Mock_Project\\appsettings.json",
@@ -162,8 +172,7 @@
               "RelativeToolTip": "Mock_Project\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-16T01:43:03.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T01:43:03.577Z"
             }
           ]
         }
