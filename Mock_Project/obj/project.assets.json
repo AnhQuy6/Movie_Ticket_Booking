@@ -4287,19 +4287,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DUC DUNG\\.nuget\\packages\\": {}
+    "C:\\Users\\thaot\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+      "projectUniqueName": "D:\\clone\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
       "projectName": "Mock_Project",
-      "projectPath": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
-      "packagesPath": "C:\\Users\\DUC DUNG\\.nuget\\packages\\",
-      "outputPath": "D:\\ngon_ngu_lt\\THUCTAP_C#\\project-movie\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
+      "projectPath": "D:\\clone\\Movie_Ticket_Booking\\Mock_Project\\Mock_Project.csproj",
+      "packagesPath": "C:\\Users\\thaot\\.nuget\\packages\\",
+      "outputPath": "D:\\clone\\Movie_Ticket_Booking\\Mock_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DUC DUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thaot\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4308,7 +4308,9 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\thaot\\Downloads\\nuget.org": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://packagesource": {}
       },
       "frameworks": {
         "net8.0": {
@@ -4373,7 +4375,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

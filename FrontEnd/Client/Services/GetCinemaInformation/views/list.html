@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Thông Tin Rạp</title>
     <style>
         body {
@@ -80,6 +82,9 @@
             color: #444;
             margin: 10px 0;
         }
+        .btn-back {
+        margin-top: 20px;
+    }
     </style>
 </head>
 <body>
@@ -98,8 +103,7 @@
         const raps = await response.json();
         
         const rapListDiv = document.getElementById('rapList');
-        rapListDiv.innerHTML = '';
-
+        rapListDiv.innerHTML = '';       
         raps.forEach(rap => {
             const rapDiv = document.createElement('div');
             rapDiv.className = 'rap';
@@ -108,6 +112,7 @@
                     <img src="https://localhost:7074${rap.anh}" alt="Ảnh rap">
                     <p>${rap.tenRap}</p>
                 </a>
+                
             `;
             rapListDiv.appendChild(rapDiv);
         });
@@ -126,12 +131,12 @@
             <p><strong>Địa chỉ:</strong> ${rap.diaChi}</p>
             <p><strong>Số điện thoại:</strong> ${rap.sdt}</p>
         `;
-
+      
         document.getElementById('rapInfo').scrollIntoView({ behavior: 'smooth' });
     }
-
+    
     window.onload = loadRaps;
 </script>
-
+<a href="javascript:history.back()" class="btn btn-primary btn-back">Quay lại</a>
 </body>
 </html>

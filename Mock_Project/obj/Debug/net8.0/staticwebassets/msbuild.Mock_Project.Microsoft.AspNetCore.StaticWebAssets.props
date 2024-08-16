@@ -1,5 +1,37 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ba176dc2f55492f358aabac8f629919788d5017_dcd4cad8-e2ec-4550-aa6f-aaa13eff4b15.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mock_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mock_Project</BasePath>
+      <RelativePath>images/6ba176dc2f55492f358aabac8f629919788d5017_dcd4cad8-e2ec-4550-aa6f-aaa13eff4b15.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ba176dc2f55492f358aabac8f629919788d5017_dcd4cad8-e2ec-4550-aa6f-aaa13eff4b15.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ba176dc2f55492f358aabac8f629919788d5017_f9a72c8c-9c2e-40f3-afc0-7366c5d5355e.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mock_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mock_Project</BasePath>
+      <RelativePath>images/6ba176dc2f55492f358aabac8f629919788d5017_f9a72c8c-9c2e-40f3-afc0-7366c5d5355e.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\6ba176dc2f55492f358aabac8f629919788d5017_f9a72c8c-9c2e-40f3-afc0-7366c5d5355e.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\avengers_35a82a8c-20d9-4107-9ca4-fa08412cda8c.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Mock_Project</SourceId>
